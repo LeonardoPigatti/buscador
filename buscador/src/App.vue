@@ -9,7 +9,7 @@
         </p>
         <input @keyup= "getUser" id="search" type="text" class="form-control" required/>
       </div>
-      <div class="row">
+      <div class="row" v-if="user.length !==0">
         <div class="col-md-4">
           <Profile :user="user"/>
         </div>
