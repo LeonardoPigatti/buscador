@@ -7,7 +7,12 @@
         <p class="lead">
           Digite um nome para pesquisar usuários 
         </p>
-        <input id="search" type="text" class="form-control" required/>
+        <input @keyup= "getUser" id="search" type="text" class="form-control" required/>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <Profile :user="user"/>
+        </div>
       </div>
     </div>
   </div>
@@ -15,6 +20,7 @@
 
 <script>
 import Navbar from "./components/Navbar.vue";
+import Profile from "./components/Profile.vue";
 import axios from 'axios';
 
 
@@ -34,7 +40,8 @@ export default {
       };
   },
   components:{
-    Navbar
+    Navbar,
+    Profile
   },
   methods:{
     getUser(e){
@@ -43,7 +50,7 @@ export default {
 
       axios.get(
         `${url}/${user}?client_id=${client_id}&client_secret=${client_secret}`
-        ).this(({data}) => this.user =data);
+        ).then(({data}) => this.user =data);
     }
   }
  
