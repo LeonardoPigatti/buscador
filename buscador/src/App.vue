@@ -5,7 +5,7 @@
       <div class="card card-body">
         <h1>Procurar Usuários e Repositórios No GitHub </h1>
         <p class="lead">
-          Digite um nome para pesquisar usuários 
+          Digite um nome para pesquisar o usuário
         </p>
         <input @keyup.enter= "getUser" id="search" type="text" class="form-control" required/>
       </div>
