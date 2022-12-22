@@ -7,7 +7,7 @@
         <p class="lead">
           Digite um nome para pesquisar usuários 
         </p>
-        <input @keyup= "getUser" id="search" type="text" class="form-control" required/>
+        <input @keyup.enter= "getUser" id="search" type="text" class="form-control" required/>
       </div>
       <div class="row mt-3" v-if="user.length !==0">
         <div class="col-md-4">
@@ -36,7 +36,7 @@ export default {
         github: {
     url: "https://api.github.com/users",
     client_id:"a7a7f86e98a307e7eb9a",
-    client_secret: " d14b8454c28edc209ab2d0bc62c725efb138af45 ",
+    client_secret: "d14b8454c28edc209ab2d0bc62c725efb138af45",
     count: 7,
     sort: "created: asc"
       },
