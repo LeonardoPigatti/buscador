@@ -10,9 +10,10 @@ Utilizei a GitHub API para realizar as buscas por perfis e repositórios
 
 	                            Instruções
 No terminal executar os seguintes comandos: 
-cd buscador
-npm i axios
-npm run serve 
+
+    cd buscador
+    npm i axios 
+    npm run serve
 
 (Obs: caso o vue-cli-service não iniciar então execute o comando npm install e logo em seguida npm run serve novamente)
 
